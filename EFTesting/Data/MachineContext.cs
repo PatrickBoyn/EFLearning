@@ -81,6 +81,10 @@ namespace EFTesting.Data
                       .OnDelete(DeleteBehavior.ClientSetNull)
                       .HasConstraintName("FK_WarrantyProvider");
             });
+
+            modelBuilder.Entity<SupportLog>(entity => {
+
+            });
         }
     }
 }
