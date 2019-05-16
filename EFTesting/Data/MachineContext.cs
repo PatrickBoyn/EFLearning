@@ -70,6 +70,10 @@ namespace EFTesting.Data
                       .IsRequired()
                       .HasMaxLength(20)
                       .IsUnicode(false);
+
+                entity.Property(e => e.WarrantyExpiration).HasColumnName("date");
+
+                entity.Property(e => e.WarrantyProviderId).HasColumnName("WarrantyProviderID");
             });
         }
     }
