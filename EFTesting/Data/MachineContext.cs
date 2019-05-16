@@ -65,6 +65,11 @@ namespace EFTesting.Data
                 entity.Property(e => e.MachineWarrantyId).HasColumnName("MachineWarrantyID");
 
                 entity.Property(e => e.MachineId).HasColumnName("MachineID");
+
+                entity.Property(e => e.ServiceTag)
+                      .IsRequired()
+                      .HasMaxLength(20)
+                      .IsUnicode(false);
             });
         }
     }
