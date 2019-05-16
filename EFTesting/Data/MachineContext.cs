@@ -41,6 +41,14 @@ namespace EFTesting.Data
                       .IsRequired()
                       .HasMaxLength(25)
                       .IsUnicode(false);
+
+                entity.Property(e => e.OperatingSysId).HasColumnName("OperatingSysID");
+
+                entity.HasOne(d => d.MachineType)
+                      .WithMany(p => p.Machine)
+                      .HasForeignKey(d => d.MachineId)
+                      .OnDelete(DeleteBehavior.ClientSetNull)
+                      .HasConstraintName("FK_MachineType");
             });
         }
     }
