@@ -12,6 +12,9 @@ namespace EFTesting.Data
         public DbSet<SupportLog> SupportLog { get; set; }
         public DbSet<SupportTicket> SupportTicket { get; set; }
         public DbSet<WarrantyProvider> WarrantyProvider { get; set; }
-
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            
+        }
     }
 }
