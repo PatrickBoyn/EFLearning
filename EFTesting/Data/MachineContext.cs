@@ -135,6 +135,9 @@ namespace EFTesting.Data
                       .IsUnicode(false);
 
                 entity.Property(e => e.MachineId).HasColumnName("MachineID");
+
+                entity.Property(e => e.TicketOpenedBy)
+                      .IsRequired();
             });
         }
     }
