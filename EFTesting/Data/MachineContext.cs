@@ -126,6 +126,8 @@ namespace EFTesting.Data
                 entity.Property(e => e.SupportTicketId).HasColumnName("SupportTicketID");
 
                 entity.Property(e => e.DateReported).HasColumnType("date");
+
+                entity.Property(e => e.DateResolved).HasColumnType("date");
             });
         }
     }
