@@ -62,7 +62,7 @@ namespace EFTesting.Data
             });
 
             modelBuilder.Entity<MachineWarranty>(entity => {
-
+                entity.Property(e => e.MachineWarrantyId).HasColumnName("MachineWarrantyID");
             });
         }
     }
