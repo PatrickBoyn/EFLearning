@@ -133,6 +133,8 @@ namespace EFTesting.Data
                       .IsRequired()
                       .HasMaxLength(150)
                       .IsUnicode(false);
+
+                entity.Property(e => e.MachineId).HasColumnName("MachineID");
             });
         }
     }
