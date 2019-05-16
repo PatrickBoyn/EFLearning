@@ -128,6 +128,11 @@ namespace EFTesting.Data
                 entity.Property(e => e.DateReported).HasColumnType("date");
 
                 entity.Property(e => e.DateResolved).HasColumnType("date");
+
+                entity.Property(e => e.IssueDescription)
+                      .IsRequired()
+                      .HasMaxLength(150)
+                      .IsUnicode(false);
             });
         }
     }
