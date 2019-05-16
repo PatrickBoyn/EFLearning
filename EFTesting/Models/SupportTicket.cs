@@ -16,6 +16,6 @@ namespace EFTesting.Models
         public string TicketOpenedBy { get; set; }
         public int MachineId { get; set; }
         public Machine Machine { get; set; }
-        ICollection<SupportLog> SupportLog { get; set; }
+        public ICollection<SupportLog> SupportLog { get; set; }
     }
 }
