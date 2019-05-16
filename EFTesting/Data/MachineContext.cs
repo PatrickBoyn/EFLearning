@@ -14,7 +14,10 @@ namespace EFTesting.Data
         public DbSet<WarrantyProvider> WarrantyProvider { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(@"Server=ServerName;Database=BegEFCore2;Trusted_Connection=false;User Id=sa;Password=");
+            }
         }
     }
 }
