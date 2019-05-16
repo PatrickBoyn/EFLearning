@@ -88,6 +88,11 @@ namespace EFTesting.Data
                       .HasConstraintName("FK_WarrantyProvider");
             });
 
+            modelBuilder.Entity<OperatingSys>(entity => 
+            {
+                
+            });
+
             modelBuilder.Entity<SupportLog>(entity => {
                 entity.Property(e => e.SupportLogId).HasColumnName("SupportLogID");
 
