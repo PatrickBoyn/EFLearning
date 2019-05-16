@@ -12,6 +12,10 @@ namespace EFTesting.Models
         public DateTime DateReported { get; set; }
         public DateTime? DateResolved { get; set; }
         public string IssueDescription { get; set; }
-
+        public string IssueDetail { get; set; }
+        public string TicketOpenedBy { get; set; }
+        public int MachineId { get; set; }
+        public Machine Machine { get; set; }
+        ICollection<SupportLog> SupportLog { get; set; }
     }
 }
