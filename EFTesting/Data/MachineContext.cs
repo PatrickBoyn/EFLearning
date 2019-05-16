@@ -90,6 +90,11 @@ namespace EFTesting.Data
                       .IsUnicode(false);
 
                 entity.Property(e => e.SupportLogEntryDate).HasColumnType("date");
+
+                entity.Property(e => e.SupportLogUpdatedBy)
+                      .IsRequired()
+                      .HasMaxLength(50)
+                      .IsUnicode(false);
             });
         }
     }
