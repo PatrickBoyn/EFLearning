@@ -25,7 +25,7 @@ namespace EFTesting.Data
             //Properties and relationships for the Machine class.
             modelBuilder.Entity<Machine>(entity => 
             {
-                entity.Property(e => e.MachineId).HasColumnName("MachineId");
+                entity.Property(e => e.MachineId).HasColumnName("MachineID");
 
                 entity.Property(e => e.GeneralRole)
                       .IsRequired()
@@ -45,12 +45,18 @@ namespace EFTesting.Data
                       .IsUnicode(false);
 
                 entity.Property(e => e.OperatingSysId).HasColumnName("OperatingSysID");
-
+                
+                //Machine Entity's relationships.
                 entity.HasOne(d => d.MachineType)
                       .WithMany(p => p.Machine)
                       .HasForeignKey(d => d.MachineId)
                       .OnDelete(DeleteBehavior.ClientSetNull)
                       .HasConstraintName("FK_MachineType");
+
+                entity.HasOne(d => d.OperatingSys)
+                      .WithMany(p => p.Machine)
+                      .HasForeignKey(d => d.OperatingSysId)
+                      .OnDelete(DeleteBehavior.ClientSetNull);
             });
 
             modelBuilder.Entity<MachineType>(entity => {
@@ -113,6 +119,8 @@ namespace EFTesting.Data
                       .IsRequired()
                       .HasMaxLength(50)
                       .IsUnicode(false);
+                
+                entity.Property(e => e.SupportNumber)
             });
         }
     }
