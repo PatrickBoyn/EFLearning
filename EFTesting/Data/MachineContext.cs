@@ -90,6 +90,8 @@ namespace EFTesting.Data
 
             modelBuilder.Entity<OperatingSys>(entity => 
             {
+                entity.Property(e => e.OperatingSysId).HasColumnName("OperatingSysID");
+
                 
             });
 
