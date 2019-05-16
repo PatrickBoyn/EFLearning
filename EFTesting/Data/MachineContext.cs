@@ -95,6 +95,9 @@ namespace EFTesting.Data
                       .IsRequired()
                       .HasMaxLength(50)
                       .IsUnicode(false);
+
+                entity.Property(e => e.SupportTicketId).HasColumnName("SupportTicketID");
+                
             });
         }
     }
