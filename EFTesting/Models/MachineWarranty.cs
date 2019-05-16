@@ -2,7 +2,7 @@ using System;
 
 namespace EFTesting.Models
 {
-    public class MachineWarranty
+    public partial class MachineWarranty
     {
         public int MachineWarrantyId { get; set; }
         public string ServiceTag { get; set; }
