@@ -19,5 +19,10 @@ namespace EFTesting.Data
                 optionsBuilder.UseSqlServer(@"Server=ServerName;Database=BegEFCore2;Trusted_Connection=false;User Id=sa;Password=");
             }
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+        }
     }
 }
