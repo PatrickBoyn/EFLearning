@@ -55,10 +55,14 @@ namespace EFTesting.Data
 
             modelBuilder.Entity<MachineType>(entity => {
                 entity.Property(e => e.MachineTypeId).HasColumnName("MachineTypeID");
-                
+
                 entity.Property(e => e.Description)
                       .HasMaxLength(15)
                       .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<MachineWarranty>(entity => {
+
             });
         }
     }
