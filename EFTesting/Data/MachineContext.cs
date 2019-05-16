@@ -140,6 +140,12 @@ namespace EFTesting.Data
                       .IsRequired()
                       .HasMaxLength(50)
                       .IsUnicode(false);
+
+                entity.HasOne(d => d.Machine)
+                      .WithMany(p => p.SupportTicket)
+                      .HasForeignKey(d => d.MachineId)
+                      .OnDelete(DeleteBehavior.ClientSetNull)
+                      .HasConstraintName("FK_Machine");
             });
         }
     }
