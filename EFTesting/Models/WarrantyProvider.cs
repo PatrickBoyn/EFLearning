@@ -11,6 +11,7 @@ namespace EFTesting.Models
         public int WarrantyProviderId { get; set; }
         public string ProviderName { get; set; }
         public int? SupportExtention { get; set; }
+        public string SupportNumber { get; set; }
         public ICollection<MachineWarranty> MachineWarranty { get; set; }
     }
 }
