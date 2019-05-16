@@ -25,7 +25,11 @@ namespace EFTesting.Data
             modelBuilder.Entity<Machine>(entity => {
                 entity.Property(e => e.MachineId).HasColumnName("MachineId");
 
-                
+                entity.Property(e => e.GeneralRole)
+                      .IsRequired()
+                      .HasMaxLength(25)
+                      .IsUnicode(false);
+
             });
         }
     }
