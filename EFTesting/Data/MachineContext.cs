@@ -92,7 +92,10 @@ namespace EFTesting.Data
             {
                 entity.Property(e => e.OperatingSysId).HasColumnName("OperatingSysID");
 
-                
+                entity.Property(e => e.Name)
+                      .IsRequired()
+                      .HasMaxLength(35)
+                      .IsUnicode();
             });
 
             modelBuilder.Entity<SupportLog>(entity => {
