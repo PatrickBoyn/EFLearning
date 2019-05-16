@@ -137,7 +137,9 @@ namespace EFTesting.Data
                 entity.Property(e => e.MachineId).HasColumnName("MachineID");
 
                 entity.Property(e => e.TicketOpenedBy)
-                      .IsRequired();
+                      .IsRequired()
+                      .HasMaxLength(50)
+                      .IsUnicode(false);
             });
         }
     }
