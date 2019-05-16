@@ -110,18 +110,6 @@ namespace EFTesting.Data
                       .OnDelete(DeleteBehavior.ClientSetNull)
                       .HasConstraintName("FK_SupportTicket");
             });
-            
-            modelBuilder.Entity<SupportTicket>(entity => 
-            {
-                entity.Property(e => e.SupportTicketId).HasColumnName("SupportTicketID");
-
-                entity.Property(e => e.TicketOpenedBy)
-                      .IsRequired()
-                      .HasMaxLength(50)
-                      .IsUnicode(false);
-                
-                entity.Property(e => e.SupportNumber)
-            });
         }
     }
 }
