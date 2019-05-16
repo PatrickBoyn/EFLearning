@@ -53,7 +53,9 @@ namespace EFTesting.Data
                       .HasConstraintName("FK_MachineType");
             });
 
-            modelBuilder.Entity<MachineType>();
+            modelBuilder.Entity<MachineType>(entity => {
+                entity.Property(e => e.MachineTypeId).HasColumnName("MachineTypeID");
+            });
         }
     }
 }
