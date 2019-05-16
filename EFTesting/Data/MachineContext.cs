@@ -30,6 +30,10 @@ namespace EFTesting.Data
                       .HasMaxLength(25)
                       .IsUnicode(false);
 
+                entity.Property(e => e.InstalledRoles)
+                      .IsRequired()
+                      .HasMaxLength(50)
+                      .IsUnicode(false);
             });
         }
     }
