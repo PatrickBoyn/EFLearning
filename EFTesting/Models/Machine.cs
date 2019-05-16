@@ -5,7 +5,7 @@ namespace EFTesting.Models
     {
         public Machine()
         {
-            SupportTicket = new HashSet<SupportTicket();
+            SupportTicket = new HashSet<SupportTicket>();
         }
         public int MachineId { get; set; }
         public string Name { get; set; }
