@@ -83,7 +83,7 @@ namespace EFTesting.Data
             });
 
             modelBuilder.Entity<SupportLog>(entity => {
-
+                entity.Property(e => e.SupportLogId).HasColumnName("SupportLogID");
             });
         }
     }
