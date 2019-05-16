@@ -22,6 +22,7 @@ namespace EFTesting.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //Properties and relationships for the Machine class.
             modelBuilder.Entity<Machine>(entity => 
             {
                 entity.Property(e => e.MachineId).HasColumnName("MachineId");
