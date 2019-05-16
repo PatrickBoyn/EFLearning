@@ -104,6 +104,11 @@ namespace EFTesting.Data
                       .OnDelete(DeleteBehavior.ClientSetNull)
                       .HasConstraintName("FK_SupportTicket");
             });
+            
+            modelBuilder.Entity<SupportTicket>(entity => 
+            {
+                
+            });
         }
     }
 }
