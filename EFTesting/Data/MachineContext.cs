@@ -123,6 +123,9 @@ namespace EFTesting.Data
 
             modelBuilder.Entity<SupportTicket>(entity => 
             {
+                entity.Property(e => e.SupportTicketId).HasColumnName("SupportTicketID");
+
+                
             });
         }
     }
