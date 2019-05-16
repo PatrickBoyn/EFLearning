@@ -84,10 +84,12 @@ namespace EFTesting.Data
 
             modelBuilder.Entity<SupportLog>(entity => {
                 entity.Property(e => e.SupportLogId).HasColumnName("SupportLogID");
-                
+
                 entity.Property(e => e.SupportLogEntry)
                       .IsRequired()
                       .IsUnicode(false);
+
+                entity.Property(e => e.SupportLogEntryDate).HasColumnType("date");
             });
         }
     }
