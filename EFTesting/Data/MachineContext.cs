@@ -74,6 +74,12 @@ namespace EFTesting.Data
                 entity.Property(e => e.WarrantyExpiration).HasColumnName("date");
 
                 entity.Property(e => e.WarrantyProviderId).HasColumnName("WarrantyProviderID");
+
+                entity.HasOne(d => d.WarrantyProvider)
+                      .WithMany(p => p.MachineWarranty)
+                      .HasForeignKey(d => d.WarrantyProviderId)
+                      .OnDelete(DeleteBehavior.ClientSetNull)
+                      .HasConstraintName("FK_WarrantyProvider");
             });
         }
     }
