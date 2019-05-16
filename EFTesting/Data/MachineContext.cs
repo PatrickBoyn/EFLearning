@@ -52,6 +52,8 @@ namespace EFTesting.Data
                       .OnDelete(DeleteBehavior.ClientSetNull)
                       .HasConstraintName("FK_MachineType");
             });
+
+            modelBuilder.Entity<MachineType>();
         }
     }
 }
