@@ -97,7 +97,12 @@ namespace EFTesting.Data
                       .IsUnicode(false);
 
                 entity.Property(e => e.SupportTicketId).HasColumnName("SupportTicketID");
-                
+
+                entity.HasOne(d => d.SupportTicket)
+                      .WithMany(p => p.SupportLog)
+                      .HasForeignKey(d => d.SupportTicketId)
+                      .OnDelete(DeleteBehavior.ClientSetNull)
+                      .HasConstraintName("FK_SupportTicket");
             });
         }
     }
