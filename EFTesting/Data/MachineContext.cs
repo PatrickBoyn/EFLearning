@@ -108,6 +108,11 @@ namespace EFTesting.Data
             modelBuilder.Entity<SupportTicket>(entity => 
             {
                 entity.Property(e => e.SupportTicketId).HasColumnName("SupportTicketID");
+
+                entity.Property(e => e.TicketOpenedBy)
+                      .IsRequired()
+                      .HasMaxLength(50)
+                      .IsUnicode(false);
             });
         }
     }
