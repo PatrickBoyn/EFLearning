@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 namespace EFTesting.Models
 {
-    public class MachineType
+    public partial class MachineType
     {
         public MachineType()
         {

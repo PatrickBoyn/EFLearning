@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 namespace EFTesting.Models
 {
-    public class OperatingSys
+    public partial class OperatingSys
     {
         public OperatingSys()
         {

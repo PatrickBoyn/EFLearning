@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 namespace EFTesting.Models
 {
-    public class WarrantyProvider
+    public partial class WarrantyProvider
     {
         public WarrantyProvider()
         {
