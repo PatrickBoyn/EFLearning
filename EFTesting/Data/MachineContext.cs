@@ -149,6 +149,7 @@ namespace EFTesting.Data
             });
             modelBuilder.Entity<WarrantyProvider>(entity => 
             {
+                  entity.Property(e => e.WarrantyProviderId).HasColumnName("WarrantyProviderID");
                   
             });
         }
