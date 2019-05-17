@@ -98,7 +98,8 @@ namespace EFTesting.Data
                       .IsUnicode();
             });
 
-            modelBuilder.Entity<SupportLog>(entity => {
+            modelBuilder.Entity<SupportLog>(entity => 
+            {
                 entity.Property(e => e.SupportLogId).HasColumnName("SupportLogID");
 
                 entity.Property(e => e.SupportLogEntry)
