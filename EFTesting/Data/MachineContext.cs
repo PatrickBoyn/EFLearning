@@ -50,7 +50,7 @@ namespace EFTesting.Data
                 //Machine Entity's relationships.
                 entity.HasOne(d => d.MachineType)
                       .WithMany(p => p.Machine)
-                      .HasForeignKey(d => d.MachineId)
+                      .HasForeignKey(d => d.MachineTypeId)
                       .OnDelete(DeleteBehavior.ClientSetNull)
                       .HasConstraintName("FK_MachineType");
 
