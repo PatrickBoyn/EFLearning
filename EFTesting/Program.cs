@@ -13,5 +13,16 @@ namespace EFTesting
                 result = MainMenu();
             }
         }
+
+        static int MainMenu()
+        {
+            int result = -1;
+            ConsoleKeyInfo cki;
+            bool cont = false;
+            do
+            {
+                
+            } while (true);
+        }
     }
 }
