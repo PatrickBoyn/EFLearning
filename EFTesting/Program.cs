@@ -21,7 +21,15 @@ namespace EFTesting
             bool cont = false;
             do
             {
-                
+                Console.Clear();
+                WriteHeader("Welcome to Newbie Data Systems");
+                WriteHeader("Main Menu");
+                Console.WriteLine("\r\nPlease select from the list below for what you would like to do today:");
+                Console.WriteLine("1. List all machines in Inventory");
+                Console.WriteLine("2. List All Operating Systems");
+                Console.WriteLine("3 Data Entry Menu");
+                Console.WriteLine("9. Exit");
+                cki = Console.ReadKey();
             } while (true);
         }
     }
