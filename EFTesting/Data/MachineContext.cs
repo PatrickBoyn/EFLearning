@@ -147,10 +147,15 @@ namespace EFTesting.Data
                       .OnDelete(DeleteBehavior.ClientSetNull)
                       .HasConstraintName("FK_Machine");
             });
+            
             modelBuilder.Entity<WarrantyProvider>(entity => 
             {
                   entity.Property(e => e.WarrantyProviderId).HasColumnName("WarrantyProviderID");
-                  
+
+                  entity.Property(e => e.ProviderName)
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
             });
         }
     }
