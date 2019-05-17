@@ -1,3 +1,4 @@
+using System.Data;
 using EFTesting.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,7 +17,7 @@ namespace EFTesting.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Server=ServerName;Database=BegEFCore2;Trusted_Connection=false;integrated security=SSPI");
+                optionsBuilder.UseSqlServer(MyConnectionString.ConnectionString());
             }
         }
 
