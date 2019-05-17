@@ -159,7 +159,7 @@ namespace EFTesting.Data
                   
                   entity.Property(e => e.SupportNumber)
                         .IsRequired()
-                        .HasMaxLength(50)
+                        .HasMaxLength(10)
                         .IsUnicode(false);
             });
         }
