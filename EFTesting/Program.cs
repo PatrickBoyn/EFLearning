@@ -67,7 +67,13 @@ namespace EFTesting
             bool cont = false;
             do
             {
-                
+                Console.Clear();
+                WriteHeader("Data Entry Menu");
+                Console.WriteLine("\r\nPlease select from the list below for what you would like to do today.");
+                Console.WriteLine("1. Add a New Machine");
+                Console.WriteLine("2. Add a New Operating System");
+                Console.WriteLine("3. Add a New Warranty Provider");
+                Console.WriteLine("9. Exit the menu");
             } while (true);
         }
     }
