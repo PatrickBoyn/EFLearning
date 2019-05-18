@@ -107,5 +107,10 @@ namespace EFTesting
         {
             Console.WriteLine($"{headerText} {Console.WindowWidth / 2} {headerText.Length /2}");
         }
+
+        static bool ValidateYoN(string entry)
+        {
+            return result;
+        }
     }
 }
