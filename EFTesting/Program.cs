@@ -105,7 +105,7 @@ namespace EFTesting
         }
         static void WriteHeader(string headerText)
         {
-            
+            Console.WriteLine($"{headerText} {Console.WindowWidth / 2} {headerText.Length /2}");
         }
     }
 }
