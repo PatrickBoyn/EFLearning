@@ -74,6 +74,7 @@ namespace EFTesting
                 Console.WriteLine("2. Add a New Operating System");
                 Console.WriteLine("3. Add a New Warranty Provider");
                 Console.WriteLine("9. Exit the menu");
+                cki = Console.ReadKey();
             } while (true);
         }
     }
