@@ -59,5 +59,9 @@ namespace EFTesting
             } while (!cont);
             return result;
         }
+
+        static void DataEntryMenu()
+        {
+        }
     }
 }
