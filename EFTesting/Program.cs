@@ -103,5 +103,9 @@ namespace EFTesting
                 }
             } while (!cont);
         }
+        static void WriteHeader(string headerText)
+        {
+            
+        }
     }
 }
