@@ -51,12 +51,13 @@ namespace EFTesting
                         cont = true;
                     }
                 }
-                catch (System.FormatException)
+                catch (System.FormatException fe)
                 {
                     //A key that wasn't a number.
-                    throw;
+                    Console.WriteLine(fe);
                 }
             } while (!cont);
+            return result;
         }
     }
 }
