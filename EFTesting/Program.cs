@@ -78,6 +78,23 @@ namespace EFTesting
                 try
                 {
                     result = Convert.ToInt16(cki.KeyChar.ToString());
+                    if (result == 1)
+                    {
+                        //AddMachine();
+                    }
+                    else if(result == 2)
+                    {
+                        AddOperatingSystem();
+                    }
+                    else if(result == 3)
+                    {
+                        //AddNewWarrantyProvider();
+                    }
+                    else if(result == 9)
+                    {
+                        //Exit the program
+                        cont = true;
+                    }
                 }
                 catch (System.Exception)
                 {
