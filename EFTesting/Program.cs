@@ -75,6 +75,15 @@ namespace EFTesting
                 Console.WriteLine("3. Add a New Warranty Provider");
                 Console.WriteLine("9. Exit the menu");
                 cki = Console.ReadKey();
+                try
+                {
+                    
+                }
+                catch (System.Exception)
+                {
+                    
+                    throw;
+                }
             } while (true);
         }
     }
