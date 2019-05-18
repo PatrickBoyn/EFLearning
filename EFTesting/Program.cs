@@ -77,7 +77,7 @@ namespace EFTesting
                 cki = Console.ReadKey();
                 try
                 {
-                    
+                    result = Convert.ToInt16(cki.KeyChar.ToString());
                 }
                 catch (System.Exception)
                 {
