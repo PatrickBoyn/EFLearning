@@ -110,6 +110,13 @@ namespace EFTesting
 
         static bool ValidateYoN(string entry)
         {
+            bool result = false;
+
+            if (entry.ToLower() == "y" || entry.ToLower() == "n")
+            {
+                result = true;
+            }
+            
             return result;
         }
     }
