@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using EFTesting.Data;
 
 namespace EFTesting
@@ -127,7 +128,11 @@ namespace EFTesting
             
             using (var context = new MachineContext())
             {
-                
+                var os = context.OperatingSys.Where(o => o.Name == osName);
+                if (os.Count() > 0)
+                {
+                    exists  = true;
+                }
             }
             return exists;
         }
