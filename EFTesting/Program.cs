@@ -116,8 +116,13 @@ namespace EFTesting
             {
                 result = true;
             }
-            
+
             return result;
+        }
+
+        static bool CheckForExistingOS(string osName)
+        {
+            return exists;
         }
     }
 }
