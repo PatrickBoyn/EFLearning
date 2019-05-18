@@ -6,7 +6,7 @@ namespace EFTesting
     {
         static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.Red;
             int result = -1;
             while (result != 9)
             {
@@ -30,6 +30,15 @@ namespace EFTesting
                 Console.WriteLine("3 Data Entry Menu");
                 Console.WriteLine("9. Exit");
                 cki = Console.ReadKey();
+                try
+                {
+                    
+                }
+                catch (System.Exception)
+                {
+                    
+                    throw;
+                }
             } while (true);
         }
     }
