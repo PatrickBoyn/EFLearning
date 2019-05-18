@@ -32,7 +32,24 @@ namespace EFTesting
                 cki = Console.ReadKey();
                 try
                 {
-                    
+                    result = Convert.ToInt16(cki.KeyChar.ToString());
+                    if (result == 1)
+                    {
+                        //DisplayALlMachines();
+                    }
+                    else if(result == 2) 
+                    {
+                        //DisplayOperatingSystems();
+                    }
+                    else if(result == 3)
+                    {
+                        DataEntryMenu();
+                    }
+                    else if(result == 9) 
+                    {
+                        //We are exiting so nothing to do.
+                        cont = true;
+                    }
                 }
                 catch (System.Exception)
                 {
