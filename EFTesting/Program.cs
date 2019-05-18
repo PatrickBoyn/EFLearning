@@ -1,4 +1,5 @@
 ﻿using System;
+using EFTesting.Data;
 
 namespace EFTesting
 {
@@ -122,6 +123,12 @@ namespace EFTesting
 
         static bool CheckForExistingOS(string osName)
         {
+            bool  exists = false;
+            
+            using (var context = new MachineContext())
+            {
+                
+            }
             return exists;
         }
     }
