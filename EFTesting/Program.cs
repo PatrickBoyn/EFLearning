@@ -96,12 +96,12 @@ namespace EFTesting
                         cont = true;
                     }
                 }
-                catch (System.Exception)
+                catch (System.FormatException fe)
                 {
-                    
+                    Console.WriteLine(fe);
                     throw;
                 }
-            } while (true);
+            } while (!cont);
         }
     }
 }
