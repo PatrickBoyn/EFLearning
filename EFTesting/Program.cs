@@ -62,7 +62,7 @@ namespace EFTesting
 
         static void DataEntryMenu()
         {
-            ConsoleKeyInfo _consoleKeyInfo;
+            ConsoleKeyInfo cki;
             int result = -1;
             bool cont = false;
             do
