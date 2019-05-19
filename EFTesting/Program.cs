@@ -137,5 +137,9 @@ namespace EFTesting
             
             return exists;
         }
+
+        static void AddOperatingSystem()
+        {
+        }
     }
 }
